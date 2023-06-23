@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senac Tur</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+    <a class="navbar-brand" href="#">
+      <img
+        src="data:image/png;base64,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"
+        width="30" height="30" alt="">
+
+      Senac Tur
+    </a>
+
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+      aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#"> Principal <span class="sr-only">(página atual)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">Sobre</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contato</a>
+        </li>
+
+
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input id="busca" class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+      </form>
+
+    </div>
+  </nav>
+
+
+  <div class="fundo">
+
+    <img class="aviao" src="https://www.pngmart.com/files/6/Glider-PNG-Clipart.png"
+      alt="">
+
+  </div>
+
+  <div class="container" style="min-height: 800px;">
+
+    <h1> Bem vindo ao Senac Tur</h1>
+    <p> Um site de pacote de viagens completo.</p>
+    <p> Os melhores destinos aliado aos melhores preços você encontrar aqui!</p>
+
+    <!--1 linha-->
+    <div class="row">
+
+      <div class="col">
+
+        <div class="card" data-name="mallet" style="width: 18rem;">
+          <img class="card-img-top"
+            src="https://diariodonoroeste.com.br/wp-content/uploads/2022/05/a-mari.jpg"
+            alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Porto Maringá Marilena-PR</h5>
+            <p class="card-text">De 19 a 21 de maio de 2023</p>
+            <p>Saída de Curitiba</p>
+            <span class="badge badge-dark">
+              <a href="1.html" class="btn btn-primary">
+                <i class="fa-solid fa-plane-departure"></i> Visitar </a>
+              12 x 83,25 por pessoa
+            </span>
+          </div>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="card" data-name="pantanal" style="width: 18rem;">
+          <img class="card-img-top"
+            src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRgVFRUZGRgYGBgYGBgZGBgZGBkZGBoZGRoaGBgcIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHjQkISs1NDQ0NTQ0NDU0NjQ0NDE0NDE2NDQ2NDQxNDQ0NDQ0NDQ0MTE0PzQ0MTQxNDExNDQ0NP/AABEIALQBGAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAAAwECBQQGB//EAEAQAAIBAwIDBQUGAwcDBQAAAAECAAMREiExBEFRBSJhcZEGE4GhsTJCwdHh8BRS8RUjM1NicpIWQ9IkVIKi4v/EABkBAQEBAQEBAAAAAAAAAAAAAAABAwIEBf/EACoRAAICAQQBAwMEAwAAAAAAAAABAhESAwQhMUEyUaFhcZETFCJSBUKB/9oADAMBAAIRAxEAPwDFrr3m8zKBY+svebzMrjPtWYCwsnGNwhhFixeMnGMCS2MWLE4ycY0JJwixYnGGMfjDGWyWKwhhHYwxixYnCGEfjDGLFicJOMdaTjFixGMMY/GGMWUTjDGOxhjFkFYSMY7GGMWLE4wxjsYYxZROMjGPxhjFksRjDGPxkWksWIwhhH2haLFnPhApH4yMYsWIxhjH4yMYsWIxhHYQixZeqvebzMrjOmqnePmZAScZCxOEkJHGnAJFgVjDGPFOGEWSxGMnGPxhjFixGMnGOCQCRYsThJxjsIYRYsVjDGOxhjFixOMnGOxk4RYsRjJwjsJOEWLEYScI7CThFixGEMI/CGEWLOe0LR+EMIsWItIxnRhIwixYjGGMdjDGLFiMYYx2MMZLAjGGMcVkYxYE4yMY/GBWLAjGEdjCWxY507x8zOHtDOmDU0ZbjQAhlGvO+onXX7X4ZWa9UaE3sCdfScre0fDt3GV7OSp05act549TWg1V8nSTvojsLjVrKyD7aGxHMjk01v4c9JgP2BRqBv4Wt7tvupdlYsuwxPeK6cphDtF8mQ8S+QOJ77AG2xFztMluHGKtX9UzpxUnwep7Y7VTh7g95wMiu1l63nT2XxK8RSWquzDUdG5j4GeD4/iWqO2NqjgJi9wXDC+i3+0Otuk6+zu1a1FAEUK7m7d5VWxa/wDh37unMCcR3TUrb4fgr0+K8ntiVyK5DIcr66/0klJ5Phk4l6grCj74KCyi91AP8rPz8BPY0iWRWZcWIuV6E8p6dLWz8Gco4icYBI/GThN8jkRhJxjsJOMZARjDGPxk4xkDnxk4R+MnCMgIwhhH4QwjICcIYR2EMJLIJwhhHYQwiyiMIYR+EMIsCMJGE6MIYRYOfCRjOnCRjFg58YYzoxkYxYOfCRjOjGQUiwc+MjCdGMjCMgIwhHYQjIHme3/Z+jRVWZzmScwASHJ6DkL26zAWiQQzWsDdQL6DbvddtvGe+7Z9oOHCuEdHqgBkBUOt7g3vtteeC43ilyNT3qM5AIQAWB1uAF2P5+E+Rqxt/wAWeiNvsvwrmk4d6jAljtppe28563aCWt7sMulza2ut9ZTiOJqOvvHXZgFGIsTYAabf0nLxXEq6gLdSSSy7Lra1gNuczjC+ZP8AHRoqNjselSyVwtwSQwDY2Gmh0JndwjlzVNPhqdUEFmUXVwhXXBjoLDXY7TBXiFUKtNbVB3WYlcLbg689flO7sYVRVU8NxCq6Ad1mCi1u8uZ0PMTqEZKV3wRo9l7MdpK1NaSUSmF8kzyYba/ZF5tbi9iPA7xXY/CVEQGuie817yKoYg2NmI8hOtknu026Vs886s58ZISOxhhNczmhOEnGNxhjGYoXjDGNxhjGYoVjJCRuMMYzFCsJOEbjDGMxQrCGEbjDGMxQrCGEbjDGMxQrCRhHYyMYzFCsIYRuMjGMxQrGGMbaRaTMUKxkFI60i0ZloTjIKx1oERmKEYSLR1pFpMhQnGTGWhGQo+YV+Gs7gsMsiLXvf4jeI4alSDYkjvcrbfH97zt7TpsrEMhQ5kXI+70v12nKaalsVsWBAufIn6ET5Cvyei6I7S4p2fEg4qQBjYgfdN7Gc1Og7LgqkX116ee/9JpcMoXVdT1OvmT8JRCoIJqY42sRrfUCxvKp1wkE2OoUERhlTpuBYFXFtTzDWNh4G06RxPDsFdqATCiylEKlahIshY6eBNxOA8SrswLgBWBAOuZsNPAaRFfjP717jIm4Urooa1gbcwJYzmlRaZ73sr2nopw6e8zDAW/mv8Z3UPabhHIAq2J/mVh87T5vU4hnRFawCXC2G4Nt/Sc607aa3Oo0+nhNI60kuTlxi2fWOH7Z4d0zFVQLkd42Ol+R15TL/wCrqd9Kb4ZBM7rub62vtpPn9PhnbVVYryYAkabTremUpHIMCziwK8gDzPnK9aXgKCPqyVFYXRgw6qQR8pBnzLsrt9+GBCEFCblWFwTtoRqNp6HhPbVG+3TI/wBpv8jNY6yffBy4nq7wvMFPajhzuzDzX9Y1faCgdnP/AB/Wap2c0bN4ZTIHblD/ADB8Yxe16J2qLOhRqZQymcO06R/7i+sG7SpDeovrLTJRpXheZq9q0f8ANT1im7b4cf8AdWQUa2UMpkf27w/+aIf25w/+aPT9YLRrZQymOvb/AA5JHvLW5kaHy1lX9oOHFu+T5Db5wKNnKGUx39oOHA/xL+AGv1ij7S0N7uR/t/WRtLyKNy8i88//ANU0r2COfSUf2tpC/cfTykyXuXE9FeBM83/1bT/y6nqPykD2tTW9JxvbUajly3jJDE9ITILTzD+1yfdpMfNv0in9rrf9nX/dp9JMkXE9UWlS08ufa0af3J217+t/SQ3tSbf4Ov8Av2+UZIYnpy0J5I+0z6f3S/8AIwkzQxYnjOxOJq3R+IzXIkI2b667ay6ezVTBglEqAgyqWLG6lrgAa6gj/iPGeh7Q7Rrq592VttdQLnLnvMX+0auRLOb3sQTob9RPnPUa4PatJSPOCo4zLJ3VUBw3csDy0tdrct9ZylKbLn7trbX73K+vd8bD4z0XEcCXpuqdxbZOLXv4KfE6Tt4Zha42vYLaP1ElaJ+38WeEfsyr9o03CWvlibKpJsW0025zU7M4mhSRRxHDMwLXWopZSwvqL5AXAvt01n0DhkW3eUHwbpL1+D4aoppvTGBN7DSxOt1PKR7qL4kvwdvayq0zx39jLxDs9EVBTLCye7qMVXplbQnXWek401sKVLh+CcItld34fMsgOtiVI5nbrN/gnFJAlFiiDZROhuLrnaswABGIHz3nC3CuvB09FV1yY3ZT16VMIvC8RbJiDT94iEE3BAUgTP8AaXgOK4koP4fiLpc3cVHAB31a9thPX8N2pWRFRcSFAAJGuI5b/OObt+tp3EtfXU6jw00kWtG7bZz+k76PjNbs9xkjsKb3KhHGNz4k2C/GSOyK6hWUK1h9xlbx1Ck9J9kqdqq18qAYnXU6etpycRxCNb/0dInrl+ayrcIPQXsfO6aK1gVxY/dwsfHcTU4TsHNGdnCY3Nja5sL6ATv7Q4WszBqfD4ACxCOh576kTnPB1HBLM6FTqHUG46gqxuJ6v3rceEkcLapdsrX7IoBkDvgNA5VWYi4NiRYkm4tYdZi8YKSuyJmyhrZGm4uP9uM1X4VCxu4AGpKsdNRawIHLL0Emp7oUi6VmZ8mCp/MPukty+c60t1lLF2cT0UlZjtSXovoYrBeVvSalIsNTr4XH1g6gjSnfxuJ9BNnlfZlhR0+UuUH8tjOv3fVPn+ksqdFPrKc2cH8P5yf4YzVu4+6YNUbmpihZlfw0P4b+s0GZj9wyVQcw3lFCzPXhfEehknhV/nX0M6/cdAfjpJ9z+9IoWZ7cMP51MBT/ANS+omiiAcvpCoB0PpFCzNFPpr5SDT8LTvWmNwJYUBJQszCvnJA8flNA8Mvh8/ykGio5n0MUWzOt+7QZR4fATQWkvU+kt7oeEULM33Y/YhNAIb6WhFCz0HEqcyVIKnQqcRqDuLAHflecr8KHOLKVcm9+VuWtvlOzikuSzBUCC7ottUJF2t8+syhVerZEbK5JyGiquy+AOjeM+Mla5PoXT4JdGpWpsuQHeflcAaWty02iK/GV1YhKVKwsQCrNcf7stJovxA7iC7XsMt72PeUs00eGphxkGAXfGw0LcuhOh28ZnOoK6s0jJtnmz2zxAsW4ZdT9wt+JjE9p1BxfhqgPS9/qJ6hEUa2HTaw9Jc+Pr0mTnDzH5NP5eGeeT2spjX3FX0H/AIy//WtAfap1QfL/APM3h1kul9wD1uLyZaf9fkOMvf4POp7a0GYKEe523J8rWnSntDmcUo1GPkVt8SJrfwqAg+7QHqFW/rvHqT/MfiTEpab6j8hKS8/BnpxVf/2zj/5D/wAZ38M7kXZSh6NY/hLX8YBj/NM3j4VHXPlj6asOd/hGm/MTkybrLioeesgZVOApkWdQ+pN2Cg68u6BEv2BQOyW8iZ0h/CSGJna1JJ2mcuKqmZj+ziD7DHyP6TlbspxoEBHgWB+s9AKsuHvvYzaO71o+TOWjB9o8u3Csu9Nh6mc7VgN0I+E9iUvsPn+EoaQ5ieiP+QmvUkzGW1i+rR48doJ1kjjkPOei4vhUzVfchgR9rG9jc7kDTb5xdfsGidMbes9C3ySVrv6mb2vszCHFJyYfKBqr1+k0K/s3zRrehmfV7JqL0Pymsd5pPt0cPbSXXJBcHpKFF6GKdWX7SG3rBHB29OfpN46sJel2ZPTnHtDbD9iXy52Bic/6yLjz8Z3ZxQ81P9P0kGovNfwiSR+94ZiCDfeJDNORiMgfykadAfLeANZl66+Qi3TxB+EqAP3pDKLBU0ze9xCF4RZTVfiFdqgVQzoWQprsbg3PgL/G05F4dGrColYIwRclYWIVS3fWxsdWta33ROvjqVc+8NOgCGxDMDix1u2RGuwM5uIpgCm3u1zKlUfNSrAG7ob/AHttJ8aPB9FjO1SGcBKpJZCoKoCGYXBuctDpe9o/g+IQ4qjsMlN7LYgLuQCeRI9ZjhqAFSwrrkMqfu8lxsBfHTvKCCDe4IEpwPHvUcZp3QmgTuPe4BbEWYIQdbb2E7cLicqVM9aAdASG0uGGl/MdZcjTqOcwuyeMBc0y9r5EKdCByC31A331mz7sghxcXH8xs3lc29J4ZwxZ6YyyRfHXnJcabn6Rat5y2V9j69fCZmgymgGg/PWXFP8AHWLTQb/IfISM+sEH+7kqmm8V72301lhU+UvA5LlPGGNoB9usBVuNQI4JyFoYwv8AvWXElCyq3ligkHxgYoWQVPWXSqRvKgyDLQOhXjFqCcSgdbQu3gYsUdhseZEo9LxvOda56Ri1h1lslCKvC33UTP4nsdG3X0m2rnrJzHMekqddA8lxHYrD7D28CJwVOCqruoI6qbH0nuKoUKWN9ATsTtrsNT8J53gO0XrMq+7UZAkgZqygC/M2ns0dbWptO0vcwnDTtJrlmEzEHW4PiNILUvPXV+z1O/ow/GZ1fsRTqF/4n8ptHf8A9l+DiW1X+rMI1IF7+fznXW7IcbG/n+e84qnCOu66fH+s9Ed3py8mMtvJeCQ50B/rIFXXYznzbmOfP9ZGXe5X+fwM3Won0zJ6bXZ0iqTCcrPc6gj5wnVkxPd9pcKt1ek5Rrnu2JV7qe6yjW/wnm+K7SpUyClPvhwHpMGsS2maowuvO5t0j+2u1+KSs2LUUQtgVdixVjcZrYCw52uZw+1PZHFGilaqyMwZQGXSpdtgCLBlNgdRcdZ8uMFas9kpewrtThuGKVHaq4qIzKhCuEXoqm2u9ovsvtFOIT3Drk6/ZqMQrgbgA77gXHSdr9k1KtLCsFVqaAlidLEaM5AHeB8OQ3jOyuziuI4ijY09BWBurA90roBYkkW06y5KmvJKdiadB6bYPcaEK6Xa7PbG5UE8j135TS4Xi2WmrI7O1rMmpCgaZAcr238ZkdvV1RnpUXZMGR0YMCmb3vncEggBNjbwnd/ZlQKHswrspLurDBzYkNjYWBNtB1klFOPPkRbT4O7ge16VQhQ7K50KsCNRuL7TSFI30b1mH2LxTG6Wpuy2Kuy4nIhrqwGxFuvWbNOnWZe/iD/pJM8WpDF0eqEskWCHXW4/e0sVAI11+UolM82Pl4xxMyNBeNhe3PltAsPxBjFNutvrJdvD03+MAojeGu8g2PL985dQDIsPjufCARh0MGJ5kW5GXW2slV20B3gFBUt08/0krWPwgQD5c/CQKdrnwgcFhV58pZag5iwiQZYqdvl+cAZ7wekBaL28/lAvrAGgAj93hh0lAb/jJBP6wCxJHXaC1zteBPj/AFkGx3EEHh/GXy531+c4vd9DAsectko7A55xZpof9J8NIlamvOWD+MtiizUzbcN5zmeiDuhHlqJ0ZGWV4sGVV7ORxoR8dDM/iewOg9NZ6R1U8hFNR1uGI+k7U5R6ZHz2eNrdjOux9YT2DqwGwbrptCarcanucfpx9jyvtwKbV6VKtVxsQWVV75VhobqunxmZxtOqwHuSxp03tZ6xZTcLi3u3Y2I72tpvcdxaBmR6QZBcE7sQuwJPp8ZPswvBVHd0oOoH847um632PIzdTqN+xg42zm7I7OZa6Hi+LKNYBUJxzQHQHL7YPTfWdfbFVKfEFKvE40alIFlVvsuCAjW6WLa+XhNzja9BUNRgpVcgQxtiNR3TrPB9he0iJVPvKaYuCjVLE2XUry0BIH7EsLmsg6XA8djs750qicQoIFKo32781sftEcrjX4Ra9uZvcqTWyVFpFQmRsFYgqLKb3OhBvLdhcZUPEOiECm7kJYgqp0sSu+JveZ/ZZqcPXqozoKiAoA4LK7A2Cqw2Om9poldpnP2Jr9sOlRFNPB0fJ76s5IIuWPevYnTaexo9rK+Kk+6ap/h2BK6/6yMctdr3EwvaqliaTumJdCHt38H0ICtpe/LpY9Zndn9pOUCI74oSfshtb55Efdtf5TmcIyiWEnFnvqbMtkZTsLvpr6c40OOTeu/xi+Frl0Ql1YsPu3Ia25FwLCXRDkSSuP3RY5Drc7GfOlFp8nrTTRZTpvp1ttIYXu2+njYxip1/MQalrow1Gk5KRhfw26/WCDxvvvzkEkA9PAyAhNvpAsFvt9JZh9dR0lmQjfWQFJ1t8/3aABHXnsYAHT5j8fCRfry5dPzgrAm+3l+IgAw252085OFhe5H72gTvcQ8OX4QWxRFuuviR9JUE9ST5XnRpbT9fSQy3G503/SBYkNbylncjnBUH8vlJUCBZCvzv+UYSOesWV13EC19vpALg32Oshj8fhtK5W+O3UHxhn1EpAK/u+vpKqh5c/LeSQLXuPLeXDC17WkLZQsV3BkCqLb28JOnxlTr1gD8+kH/ZnMKdjYW/ESi1WHO/wgh1/H9/GEQK+/I/X4wlFGSXvUcKyM5ybBrbZb23EOxuH9yzLUqBQ7F1V7Kl9AcRz5dZ5Xt01FrKwYBVqAI5axXe/jawM9FxzU66p7wq6AApcjY6MQeRuJ65Rxr2Zinlf0Ldu8dwoc0+JSyXKkoW1YC+ovb7Q3ng6vFgZGkMA1w40ZSLgriGBI26/jPa8R2RwwamyUw6hlDU2Jys33lLfb32vGP2RwtdHdaILC4CKxQvrfug2toDNoakYpdmUoybPDVOPLYsiKjAWLoXUvb+bW3oBNvsbh+EqkPxXEn3huWXRVAHNm3y0ve+syOM4FlD1KaOlNWC9/RgeY37wvfWdI4KrWVaxCPp3lFSmpxANiRlfKwHjebumuHRwu+j03ELwlZUopxFdwlS+QCPfusRYhdQMTvf5yvCdgut+K4asx1cWdVBNjjdltiVOO2M7+H4hafD8QvDUG4ZwEvnazGxGjglb2J1JEy+B7NdaYUca9NGUtUUNnqxOWHu8gZjdLuvuWjsp9pqqgq1rvigX7GQNiMzfFbA6T0VNw4JNxjbLkNdrHmJ4aj2c9H3dSnxFPF0NR2BJQdw911AsxJONtdTGDtLOonu6mQqA5rTf3ToVNmBU4q24IF9r2nE9BS6Oo6jie0BC/fI8jcekvmLeI2IG/5TK7O4tGZlQOFp90M6td7c7sNelvCaasu6kX562+W08UoOLpnqjJNWMBFr6W8RA92wvrv4Qe2N1FuZF9D6SCdj4fu04KXc302I1uDcfOQfh6kX+N4trc/35xtxpYfHTX0gFTprr4dYC9r2Hlaxkqpt4D1HwkLYacjzF7/OUE52/XUa9CZN18R4WvbxHSQzWO1/gZGZFiPoDALoPC/jv+o9ZGn6X5eW8o7A+B9bwDi/4EfMdIBcODpv0119JVQOdx6j5wZv67jyPSWKaWOnoR6byAo5HT4bmVVx0tb1kn+utvrylqii32h4X/PnAFZ6Xtbxks99zpAoeg10vy+chl1C/Qgj5QUhLcvjz+MsuRJxAlQm4t8dAZQkqbC3re/ppALpUN7EC4g2l76cwL/nFXa9wP8A7L9LwzIOot10vKQYGv8AHmP3rJNr+H75ShO51+EqXyAF9PH8IBd0/r+94SqjUAkm2mu8IFmAvDpxFEVaijL3p0Gi6PiNPKJ9rOJNNFCgAMrg6bAYWt03MIT2x7f3MJdGJ2dxTNlTY3RUzUHk1r3B33ns+AXRrkmwBF+RO9oQk1hpdHXw4FW6uAylGJBGhI2vPnntKqjjMFUIv92tluBYgX57yYS7b1P7E1j2Hscg4hOJo1e8KfcDffK2vZjsdQOUR2fwKXqUQLKtwCPtc9Tyv8IQnT9T/wCHK9KPMfwgX3qBmKU6igKSCGF8u9p16Wmt7CMtbiHVqVMAIWAVTYMGABFydbEwhNdT0s4j2ek7cQcMaYpbPXLtfW5JyPw5W6TrChWIAFiLnzO5hCeHV8Hoh2zpRB+nKSKY00hCec1K1hidJb3YN/OEJQUYb6naLVz8oQlKDco1RdbneTCQgpjoOXlG8ZTAAI30+sIQUpax0lKdQ3+JhCVkRfe9+R0kcOgOh2+nlCEMEIg1ibbyISoFr2tKuLWtCEhUNQeJ2ievnCEEJpKDqeshhe/LyhCAM4dAdTvCEIIf/9k="
+            alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Porto São josé</h5>
+            <p class="card-text">De 24 a 30 de maio de 2023</p>
+            <p>Saída de Curitiba</p>
+            <span class="badge badge-dark">
+              <a href="2.html" class="btn btn-primary">
+
+                <i class="fa-solid fa-plane-departure"></i> Visitar
+
+              </a>
+              12 x 261,25 por pessoa
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card" data-name="ponta grossa" style="width: 18rem;">
+          <img class="card-img-top"
+            src="https://www.hojemais.com.br/imagem/noticia/1000/1000/1677531360_94861.jpg"
+            alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Marialva</h5>
+            <p class="card-text">Dia 28 de maio de 2023</p>
+            <p>Saída de Curitiba</p>
+            <span class="badge badge-dark">
+              <a href="3.html" class="btn btn-primary">
+                <i class="fa-solid fa-plane-departure"></i> Visitar </a>
+              2 x 80 por pessoa
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--2 linha-->
+    <div class="row">
+
+      <div class="col">
+        <div class="card" data-name="joão pessoa" style="width: 18rem;">
+          <img class="card-img-top"
+            src="https://retur.com.br/app/uploads/2019/12/topo-Rafael-Zardeto-e-Junior-Valin.jpg"
+            alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Porto Rico</h5>
+            <p class="card-text">De 28 de maio a 04 de junho de 2023</p>
+            <p>Saída de Curitiba</p>
+            <span class="badge badge-dark">
+              <a href="4.html" class="btn btn-primary">
+                <i class="fa-solid fa-plane-departure"></i> Visitar </a>
+              12 x 374,25 por pessoa
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card" data-name="rio negro" style="width: 18rem;">
+          <img class="card-img-top"
+            src="https://media-cdn.tripadvisor.com/media/photo-s/0c/c7/61/a1/img-20160831-wa0014-largejpg.jpg"
+            alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Parque do japão - maringá</h5>
+            <p class="card-text">Dia 18 de junho de 2023</p>
+            <p>Saída de Curitiba</p>
+            <span class="badge badge-dark">
+              <a href="5.html" class="btn btn-primary">
+
+                <i class="fa-solid fa-plane-departure"></i> Visitar </a>
+              98 por pessoa
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card" data-name="mallet" style="width: 18rem;">
+          <img class="card-img-top"
+            src="https://i0.wp.com/www.paranaturismo.com.br/wp-content/uploads/2013/12/terra-rica1.jpg?ssl=1"
+            alt="Imagem de capa do card">
+          <div class="card-body">
+            <h5 class="card-title">Tres morrinhos</h5>
+            <p class="card-text">Dia 27 de maio de 2023</p>
+            <p>Saída de Curitiba</p>
+            <span class="badge badge-dark">
+              <a href="6.html" class="btn btn-primary">
+                <i class="fa-solid fa-plane-departure"></i> Visitar </a>
+              2 x 77,50 por pessoa
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100"
+            src="https://www.sescpr.com.br/wp-content/uploads/2020/12/jaguariaiva-pr-720x406.jpg" alt="Primeiro Slide">
+        </div>
+
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://www.sescpr.com.br/wp-content/uploads/2019/05/Gramado2-720x406.jpg"
+            alt="Segundo Slide">
+        </div>
+
+        <div class="carousel-item">
+          <img class="d-block w-100"
+            src="https://www.sescpr.com.br/wp-content/uploads/2022/03/Foz-do-Iguacu-Pq-Aves.jpg" alt="Terceiro Slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Próximo</span>
+      </a>
+    </div>
+
+    <div>
+
+    </div>
+  </div>
+
+
+    
+    <div class="row bg-primary rodape" style="margin-top: 30px;">
+      <div class="col-md"></div>
+
+      <div class="col-md"> 
+        <h5> Redes Sociais</h5> 
+        
+        <a target="_blank" href="https://pt-br.facebook.com/"><p> <i class="fa-brands fa-facebook"></i> Facebook</p> </a>
+        <a href="#"> <p> <i class="fa-brands fa-instagram"> </i> Instagram  </p> </a>
+        <a href="#"> <p> <i class="fa-brands fa-youtube"> </i> Youtube      </p> </a> 
+        <a href="#"> <p> <i class="fa-brands fa-whatsapp"> </i> whatsapp    </p> </a> 
+        
+      </div>
+
+      <div class="col-md"> 
+        <h5> Contato </h5>
+        <a href=""> <p> <i class="fa-solid fa-envelope"> </i> ciclano@email.com </p> </a>
+        <a href=""> <p> <i class="fa-solid fa-phone"> </i> Telefone: 4002-8922  </p> </a>
+        <img  alt="" width="80" height="60" src="https://www.pr.senac.br/images/logo_branco.png">
+      </div>
+
+      
+    </div>
+    
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/64765a3174285f0ec46e93d6/1h1n50l50';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

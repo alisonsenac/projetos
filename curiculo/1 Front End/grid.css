@@ -1,0 +1,26 @@
+.item {
+    background: rgb(143, 218, 128);
+    margin: 5px;
+    font-size: 15px;
+    text-align: center;
+    font-family:fantasy;
+    border-radius: 20px;
+}
+
+.coluna{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.linha{
+    grid-template-rows: 300px 300px 300px 300px;
+
+}
+
+img {
+    width: 100px;
+    border: 4px solid rgb(37, 66, 233);
+}
+
+

@@ -1,0 +1,59 @@
+body{
+    background-image: url(https://3.bp.blogspot.com/-Nxwz-7SiIds/TchKDm9CwII/AAAAAAAAAMQ/PicTLje0qII/s1600/raios-chuva-gif-animado.gife);
+    background-size: cover;
+}
+.painel{
+    background-color: rgba(0, 0, 0, 0.068);
+    width: 500px;
+    height: 900px;
+    color: rgba(219, 233, 233, 0.952);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin:auto;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 25px;
+    box-shadow: 5px 5px 35px rgba(147, 210, 221, 0.452); /*x lateral,y altura, suavidade*/
+}
+#cidade{
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+#botao{
+    background-color: rgb(174, 177, 177);
+    border-radius: 50px;
+    height: 30px;
+    animation: cor 10s alternate infinite;
+}
+.imgTempo{
+    animation: voltar 4s  alternate infinite;
+}
+@keyframes voltar {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-100px);
+        opacity: 1;
+    }
+} 
+
+@keyframes cor {
+0% {
+    background-color:red
+}
+25%{
+    background-color: azure;
+}
+50%{
+    background-color: aqua;
+}
+75%{
+    background-color: chartreuse;
+}
+100%{
+    background-color: blue;
+    height: -100px;
+}
+    }

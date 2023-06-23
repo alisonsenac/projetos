@@ -1,0 +1,88 @@
+body, p{
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-style: italic;
+    color:black;
+    text-align: center;
+} 
+header {
+    grid-area: cabecalho;
+    background-color: rgb(27, 182, 209);
+}
+section {
+    grid-area: secao;
+    background-color: rgb(130, 122, 233);
+}
+
+aside {
+    grid-area: barra-lateral;
+    background-color: khaki;
+}
+footer{
+    grid-area: rodape;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.parte1, .parte2, .parte3{
+    width: 25%;
+    background-color: lightgreen;
+}
+
+.parte2{
+    width: 50%;
+    margin: 0 2px;
+}
+.foto{
+    width: 200px;
+}
+
+.principal {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 100px 350px 200px;
+    grid-template-areas:
+    "cabecalho cabecalho"
+    "secao barra-lateral"
+    "rodape rodape";
+
+}
+
+@media(max-width:992px) {
+    .principal{
+        grid-template-columns: 100%;
+        grid-template-areas: "cabecalho" " secao" "barra-lateral" "rodape";
+   }
+
+   footer {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+   }
+   .parte1, .parte2, .parte3{
+    margin: 0;
+    width: 49%;
+
+   }
+   .parte2{
+    width: 100%;
+    order: -1;
+   }
+
+}
+@media(max-width: 768px){
+    body{
+        margin: 0 15px;
+    }
+    .principal, .parte1, .parte2, .parte3 {
+        width: 100%;
+
+    }
+    .parte2{
+        order:initial;
+
+    }
+}

@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(115, 146, 146);
+    margin:auto;
+    margin-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+.tabela{
+    background-color: azure;
+    width: 500px;
+    height: 500px;
+    margin:auto;
+    border-radius: 10px;
+    text-align: center;
+}
+.botao{
+    background-color: blue;
+    color: rgb(225, 233, 233);
+    width: 80px;
+    height: 25px;
+    border: none;
+
+}
+.moedas{
+    background-color: rgb(29, 197, 175);
+    width: 70px;
+    height: 25px;
+}
+.valor{
+    color: chartreuse;
+    background-color: black;
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+img{
+    animation: rotacionar 5s infinite alternate;
+}
+@keyframes rotacionar {
+    0%{
+        transform: rotate3d(0,1,0, 0deg);
+    }
+    100%{
+        transform: rotate3d(0,1,0, 360deg);
+    }
+}

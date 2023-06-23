@@ -1,0 +1,29 @@
+body {
+    background-image: url(https://i.gifer.com/origin/8a/8a2a933a4c7e248c8e99956f9528ee42.gif);
+    background-size: cover;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.painel{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(231, 195, 247);
+    border-radius: 10px;
+    padding-left: 40px;
+    margin: auto;
+}
+.botao{
+    background-color: rgb(168, 77, 224);
+    color: rgb(227, 233, 233);
+    border: none;
+    height: 40px;
+    width: 60px;
+    border-radius: 10px;
+}
+.botao:hover{
+    background-color: rgb(236, 37, 210);
+    height: 50px;
+    width: 70px;
+    transition: 1s;
+}
