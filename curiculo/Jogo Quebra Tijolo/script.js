@@ -15,14 +15,17 @@ var bolaY = canvas.height - 30;
 var bolaDX = 4;             //direção da bola em x (esquerda / direita)           
 var bolaDY = -2;            //direção de bola em y (acima / baixo)
 
-var tijolosPorLinha = 6;
+var tijolosPorLinha = 3;
 var tijolosPorColuna = 6;
 var tijoloLargura = 75;
 var tijoloAltura = 20;
 var tijoloEspaçamento = 10;
-var espaçamentoSuperiorQudro = 40;
+var espaçamentoSuperiorQudro = 30;
 var espaçamentoEsquerdoQuadro = 30;
 var tijolos = []; //lista com os tijolos
+
+var totalPontuação = tijolosPorLinha * tijolosPorColuna * 10;
+var pontuação = 0;
 
 //dedicado apena a inicialização dos tijolos 
 for(var coluna=0; coluna< tijolosPorColuna; coluna++ ){
@@ -116,14 +119,22 @@ function detectarColisao(){
 
             var tijolo = tijolos[coluna][linha];
 
-            if(tijolo.ativo ===1){
+            if(tijolo.ativo === 1){
 
-                if(bolaX > tijolo.x
-                    && bolaX < tijolo.x + tijoloLargura
-                    && bolaY > tijolo.y
-                    && bolaY < tijolo.y + tijoloAltura){
+                if(bolaX + bolaRadius > tijolo.x
+                    && bolaX - bolaRadius < tijolo.x + tijoloLargura
+                    && bolaY + bolaRadius > tijolo.y
+                    && bolaY - bolaRadius < tijolo.y + tijoloAltura){
                         bolaDY = -bolaDY;
                         tijolo.ativo = 0;
+                        
+                        tela = document.getElementById("ponto");
+                        pontuação = pontuação + 10;
+                        tela.innerHTML = "Score: "+ pontuação;
+
+                        if(pontuação === totalPontuação){
+                            window.location.reload();
+                        }
 
 
                     }
@@ -131,6 +142,17 @@ function detectarColisao(){
             }
         }
     }
+}
+
+function gameover(){
+    var gameover = document.getElementById("gameover");
+    gameover.style.display = "block";
+}
+
+function reiniciar(){
+   // document.location.reload();
+
+   window.open('index.html');
 }
 
 function desenhar() {
@@ -142,20 +164,22 @@ function desenhar() {
 
     //analisar colisao eixo X, colisao direita/esquerdo
     if (bolaX + bolaDX > canvas.width - bolaRadius || bolaX + bolaDX < bolaRadius) {
-        bolaDX = - bolaDX;
+        bolaDX = - bolaDX; //inverte direção direita/esquerda
     }
 
     //analisa colisao com parte de cima
     if (bolaY + bolaDY < bolaRadius) {
         bolaDY = -bolaDY; //inverte colisao ao bater em cima
-    } else if (bolaY + bolaDY > canvas.height - bolaRadius) {
+
+    } else if (bolaY + bolaDY > canvas.height - bolaRadius - raqueteAltura) {
 
         //se for maior que o começo da raquete e menor que o final da raquete
         if (bolaX > raqueteX && bolaX <  raqueteX + raqueteLargura) {
 
             bolaDY = -bolaDY;           //inverte direção
         } else {
-            document.location.reload(); //reinicia
+            // document.location(); //reinicia
+            gameover();
         }
 
     }

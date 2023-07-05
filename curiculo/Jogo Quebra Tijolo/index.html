@@ -11,8 +11,17 @@
 <body>
 
       <div class="painel">
-         <canvas id="gameCanvas" width="600" height="400"></canvas>
+         <canvas id="gameCanvas" width="600" height="400"> </canvas>
+         <p id="ponto">Score:0</p>
          <h1>jogo Quebra Tijolos</h1>
+     </div>
+
+     <div class="gameover" id="gameover">
+        <div class="mensagemGameover">
+            Game Over!
+            <br>
+            <button onclick="reiniciar()">Clique para Jogar Novamente</button>
+        </div>
      </div>
 
     </canvas>
