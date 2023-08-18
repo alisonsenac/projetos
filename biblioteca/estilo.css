@@ -1,0 +1,26 @@
+ul{
+    list-style: none;
+    margin-left: 70px;
+}
+.painel{
+    height: 600px;
+    width: 500px;
+    border-radius: 20px;
+    margin: auto;
+    text-align: center;
+    background-color: rgba(125, 180, 170, 0.377);
+    box-shadow: 5px 5px 15px;
+    min-height: 300px;
+}
+body{
+    background-image:url(https://italianorio.com.br/wp-content/uploads/2022/09/livros--1024x687.jpg) ;
+    background-size: cover;
+    font-family: fantasy;
+}
+button{
+    background-color: blue;
+    border: none;
+    padding: 3px;
+    border-radius: 5px;
+}
+
